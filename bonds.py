@@ -10,7 +10,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select, WebDriverWait
 import chromedriver_autoinstaller
 from webdriver_manager.chrome import ChromeDriverManager
-import chromedriver_binary
+# import chromedriver_binary
 
 
 
