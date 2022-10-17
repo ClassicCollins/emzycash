@@ -12,4 +12,3 @@ sympy
 chromedriver-autoinstaller
 webdriver_manager
 python-dateutil
-chromedriver.exe
