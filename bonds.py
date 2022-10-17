@@ -10,6 +10,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select, WebDriverWait
 import chromedriver_autoinstaller
 from webdriver_manager.chrome import ChromeDriverManager
+import chromedriver_binary
 
 
 
@@ -46,16 +47,16 @@ service = ChromeService(executable_path=ChromeDriverManager().install())
 # service = ChromeService(executable_path="C:\Program Files\Google\Chrome\Application\chrome.exe" )
 
 # Chrome options
-# chrome_options = webdriver.ChromeOptions()
-# chrome_options.add_argument('--no-sandbox')
-# chrome_options.add_argument('--disable-infobars')
-# chrome_options.add_argument('--disable-dev-shm-usage')
-# chrome_options.add_argument('--start-maximized')
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument('--no-sandbox')
+chrome_options.add_argument('--disable-infobars')
+chrome_options.add_argument('--disable-dev-shm-usage')
+chrome_options.add_argument('--start-maximized')
 
 # Run chrome
 driver = webdriver.Chrome(service=service,executable_path='/home/appuser/.wdm/drivers/chromedriver/linux64/106.0.5249' )
 # driver = webdriver.Chrome('/path/to/chromedriver')  # Optional argument, if not specified will search path.
-# driver = webdriver.Chrome(options=chrome_options)
+driver = webdriver.Chrome(options=chrome_options)
 
 # store starting time
 begin = time.time()
