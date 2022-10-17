@@ -12,7 +12,7 @@ st.image("emzyCash_background.jpg", caption='Think Easy Cash, Think EmzyCash', w
 # Caption
 colored_header(
     label="EmzyCash",
-    description='[Stocks](https://emzycash-financial-assets-stocks-financial-assets-renzow.streamlitapp.com "Click for Investment in Stocks") [Bonds](https://emzycash-financial-assets-bonds-financial-assets-b8raad.streamlitapp.com "Click for investment in Bond") [Options](https://emzycash-financial-assets-options-financial-assets-jvimu1.streamlitapp.com "Click for investment in Options") [Forex](https://emzycash-financial-assets-forex-financial-assets-nwjnij.streamlitapp.com "Click for investment in Forex") [Crypto](https://emzycash-financial-assets-crypto-financial-assets-7bid4d.streamlitapp.com "Click for investment in cryptos")',
+    description='[Stocks](https://classiccollins-emzycash-stocks-python-projects-iemonh.streamlitapp.com "Click for Investment in Stocks") [Bonds](https://classiccollins-emzycash-bonds-python-projects-wyrxh8.streamlitapp.com "Click for investment in Bond") [Options](https://emzycash-financial-assets-options-financial-assets-jvimu1.streamlitapp.com "Click for investment in Options") [Forex](https://classiccollins-emzycash-forex-python-projects-o7f0q0.streamlitapp.com "Click for investment in Forex") [Crypto](https://classiccollins-emzycash-crypto-python-projects-p7576a.streamlitapp.com "Click for investment in cryptos")',
     color_name="green-70",
 )
 st.write("""
