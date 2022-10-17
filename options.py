@@ -6,7 +6,7 @@ st.image("Option_background.jpg", caption='Think Easy Cash, Think EmzyCash', wid
 # Caption
 st.write("""
 # EmzyCash
-## [Home](https://emzycash.streamlitapp.com/ "Click to return home")
+## [Home](https://emzycash.streamlitapp.com "Click to return home")
 Find below how introduction to options investment.
 """)
 st.write("Enter Company data to observe available bonds")
