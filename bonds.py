@@ -42,7 +42,8 @@ coupon_frequency = st.sidebar.text_input("Enter Coupon frequency (optional): ", 
 
 # chromedriver_autoinstaller.install()
 # service = Service(executable_path=ChromeDriverManager().install())
-service = ChromeService(executable_path="C:\Program Files\Google\Chrome\Application\chrome.exe" )
+service = ChromeService(executable_path=ChromeDriverManager().install())
+# service = ChromeService(executable_path="C:\Program Files\Google\Chrome\Application\chrome.exe" )
 
 # Chrome options
 # chrome_options = webdriver.ChromeOptions()
@@ -52,7 +53,7 @@ service = ChromeService(executable_path="C:\Program Files\Google\Chrome\Applicat
 # chrome_options.add_argument('--start-maximized')
 
 # Run chrome
-driver = webdriver.Chrome(service=service)
+driver = webdriver.Chrome(service=service,executable_path='/path/to/chromedriver' )
 # driver = webdriver.Chrome('/path/to/chromedriver')  # Optional argument, if not specified will search path.
 # driver = webdriver.Chrome(options=chrome_options)
 
