@@ -1,0 +1,14 @@
+streamlit
+yfinance 
+pandas
+matplotlib
+pandas_datareader
+streamlit_extras
+datetime
+seaborn
+numpy
+selenium
+sympy
+chromedriver-autoinstaller
+webdriver_manager
+python-dateutil
