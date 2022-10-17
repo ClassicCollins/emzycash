@@ -5,4 +5,4 @@ in order to make profitable returns at minimal risk.
  
 We will concentrate on Stocks, Bonds, Options, Forex and Crptos. 
 If any of these financial assets interest you and you wish to build a portfolio with it 
-[click here](https://emzycash-financial-assets-investment-financial-assets-iu5i0y.streamlitapp.com "EmzyCash")
+[click here](https://classiccollins-emzycash-investment-python-projects-b8lndg.streamlitapp.com "EmzyCash")
