@@ -53,7 +53,7 @@ service = ChromeService(executable_path=ChromeDriverManager().install())
 # chrome_options.add_argument('--start-maximized')
 
 # Run chrome
-driver = webdriver.Chrome(service=service,executable_path='/path/to/chromedriver' )
+driver = webdriver.Chrome(service=service,executable_path='/home/appuser/.wdm/drivers/chromedriver/linux64/106.0.5249' )
 # driver = webdriver.Chrome('/path/to/chromedriver')  # Optional argument, if not specified will search path.
 # driver = webdriver.Chrome(options=chrome_options)
 
