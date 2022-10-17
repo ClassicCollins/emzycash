@@ -42,8 +42,8 @@ coupon_frequency = st.sidebar.text_input("Enter Coupon frequency (optional): ", 
 
 # chromedriver_autoinstaller.install()
 # service = Service(executable_path=ChromeDriverManager().install())
-service = ChromeService(executable_path=ChromeDriverManager().install())
-# service = ChromeService(executable_path="C:\Program Files\Google\Chrome\Application\chrome.exe" )
+# service = ChromeService(executable_path=ChromeDriverManager().install())
+service = ChromeService(executable_path="https://github.com/ClassicCollins/emzycash/blob/Python_projects/chromedriver.exe" )
 
 # Chrome options
 chrome_options = webdriver.ChromeOptions()
