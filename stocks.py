@@ -12,7 +12,7 @@ st.image("stock_background.jpg", caption='Think Easy Cash, Think EmzyCash', widt
 # Caption
 st.write("""
 # EmzyCash
-## [Home](https://emzycash-financial-assets-investment-financial-assets-iu5i0y.streamlitapp.com "Click to return home")
+## [Home](https://classiccollins-emzycash-investment-python-projects-b8lndg.streamlitapp.com "Click to return home")
 
 Welcome to stocks investment. The steps we are to take in quantitative analysis are:
 
