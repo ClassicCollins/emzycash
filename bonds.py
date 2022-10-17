@@ -3,8 +3,8 @@ import streamlit as st
 import time
 import pandas as pd
 from selenium import webdriver
-# from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service #as ChromeService
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select, WebDriverWait
@@ -40,22 +40,20 @@ company_name = st.sidebar.text_input("Enter a Company name(optional): ", "Hess")
 coupon_frequency = st.sidebar.text_input("Enter Coupon frequency (optional): ", "Semi-Annual")
 # coupon_frequency = "Semi-Annual"
 
-#chromedriver_autoinstaller.install()
+chromedriver_autoinstaller.install()
+# service = Service(executable_path=ChromeDriverManager().install())
 
 # Chrome options
-service = Service(executable_path=ChromeDriverManager().install())
-
-# chrome_options = webdriver.ChromeOptions()
-# chrome_options.add_argument('--no-sandbox')
-# chrome_options.add_argument('--disable-infobars')
-# chrome_options.add_argument('--disable-dev-shm-usage')
-# chrome_options.add_argument('--start-maximized')
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument('--no-sandbox')
+chrome_options.add_argument('--disable-infobars')
+chrome_options.add_argument('--disable-dev-shm-usage')
+chrome_options.add_argument('--start-maximized')
 
 # Run chrome
-driver = webdriver.Chrome(service=service)
-
-# 2. driver = webdriver.Chrome('/path/to/chromedriver')  # Optional argument, if not specified will search path.
-#driver = webdriver.Chrome(options=chrome_options)
+# driver = webdriver.Chrome(service=service)
+# driver = webdriver.Chrome('/path/to/chromedriver')  # Optional argument, if not specified will search path.
+driver = webdriver.Chrome(options=chrome_options)
 
 # store starting time
 begin = time.time()
