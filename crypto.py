@@ -14,6 +14,6 @@ st.image("crypto-background.jpeg", caption='Think Easy Cash, Think EmzyCash', wi
 # Caption
 st.write("""
 # EmzyCash
-## [Home](https://classiccollins-emzycash-investment-python-projects-b8lndg.streamlitapp.com "Click to return home")
+## [Home](https://emzycash.streamlitapp.com "Click to return home")
 Kindly reach out to emezieugwuozor@gmail.com to optimize your investment in cryptocurrency.
 """)
