@@ -54,9 +54,9 @@ chrome_options.add_argument('--disable-dev-shm-usage')
 chrome_options.add_argument('--start-maximized')
 
 # Run chrome
-driver = webdriver.Chrome(service=service,executable_path='/home/appuser/.wdm/drivers/chromedriver/linux64/106.0.5249' )
+driver = webdriver.Chrome(service=service)
 # driver = webdriver.Chrome('/path/to/chromedriver')  # Optional argument, if not specified will search path.
-driver = webdriver.Chrome(options=chrome_options)
+# driver = webdriver.Chrome(options=chrome_options)
 
 # store starting time
 begin = time.time()
