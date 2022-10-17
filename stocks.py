@@ -12,21 +12,17 @@ st.image("stock_background.jpg", caption='Think Easy Cash, Think EmzyCash', widt
 # Caption
 st.write("""
 # EmzyCash
-## [Home](https://classiccollins-emzycash-investment-python-projects-b8lndg.streamlitapp.com "Click to return home")
+## [Home](https://emzycash.streamlitapp.com "Click to return home")
 
 Welcome to stocks investment. The steps we are to take in quantitative analysis are:
 
-  - Choose five stock of your choice to compare their historical data (Volatility and Daily Percentage return) for the 
-  past two years.
+  - Choose five stock of your choice to compare their historical data (Volatility and Daily Percentage return) for the past two years.
   - Input the **Ticker Symbols** of these five selected stocks in the left side bar.
-  - Click on Download data button below to download the first five stocks result. Ensure you entered the correct ticker
-   symbol for each stock. You can confirm the correct symbol on YahooFinance
+  - Click on Download data button below to download the first five stocks result. Ensure you entered the correct ticker symbol for each stock. You can confirm the correct symbol on YahooFinance
   - Go through the process again to download as many stock data as possible.
   - When you done with data extraction, you can compare the values of your result.
-  - The stock with the highest value of daily percentage return and lowest value of volatility and standard deviation 
-  are the best to invest on based on two year historical data
-  - There are other methods of quantitative analysis such as price-to-earnings ratio and discounted cash flow valuation.
-  Quantitative analysis will guide you in making an informed investment decision.
+  - The stock with the highest value of daily percentage return and lowest value of volatility and standard deviation are the best to invest on based on two year historical data
+  - There are other methods of quantitative analysis such as price-to-earnings ratio and discounted cash flow valuation. Quantitative analysis will guide you in making an informed investment decision.
 
 \
 Ensure you entered a correct **ticker symbol** in the text box.(only for companies listed on Yahoo finance eg. 
