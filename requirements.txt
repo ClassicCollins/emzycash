@@ -11,5 +11,4 @@ selenium
 sympy
 chromedriver-autoinstaller
 webdriver_manager
-chromium-browser
 python-dateutil
