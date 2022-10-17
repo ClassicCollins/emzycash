@@ -15,7 +15,7 @@ st.image("bond_background.jpeg", caption='Think Easy Cash, Think EmzyCash', widt
 # Caption
 st.write("""
 # EmzyCash
-## [Home](https://classiccollins-emzycash-investment-python-projects-b8lndg.streamlitapp.com/ "Click to return home")
+## [Home](https://classiccollins-emzycash-investment-python-projects-b8lndg.streamlitapp.com "Click to return home")
 
 Kindly use the side bar to impute the company data (Ticker symbol, Company name and Coupon frequency) you wished to 
 observe. Examples
