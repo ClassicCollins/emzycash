@@ -12,4 +12,4 @@ sympy
 chromedriver-autoinstaller
 webdriver_manager
 python-dateutil
-chromedriver_binary
+chromedriver
