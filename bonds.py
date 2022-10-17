@@ -24,8 +24,7 @@ Kindly use the side bar to impute the company data (Ticker symbol, Company name 
 observe. Examples
  - Ticker symbol(Required): HES, F, KHC, DVN
  - Company name(Optional): Hess,Ford Motor,Kraft Heinz Co, Devon Energy
- - Coupon frequency(Optional): Semi-Annual, ALL, Annual, Anytime, Bi-Monthly, Monthly, N/A, None, Pays At Maturity,
-  Quarterly
+ - Coupon frequency(Optional): Semi-Annual, ALL, Annual, Anytime, Bi-Monthly, Monthly, N/A, None, Pays At Maturity, Quarterly
 """)
 st.sidebar.write("Enter Company data to observe available bonds")
 # Required
