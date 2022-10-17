@@ -40,20 +40,21 @@ company_name = st.sidebar.text_input("Enter a Company name(optional): ", "Hess")
 coupon_frequency = st.sidebar.text_input("Enter Coupon frequency (optional): ", "Semi-Annual")
 # coupon_frequency = "Semi-Annual"
 
-chromedriver_autoinstaller.install()
+# chromedriver_autoinstaller.install()
 # service = Service(executable_path=ChromeDriverManager().install())
+service = ChromeService(executable_path="C:\Program Files\Google\Chrome\Application\chrome.exe" )
 
 # Chrome options
-chrome_options = webdriver.ChromeOptions()
-chrome_options.add_argument('--no-sandbox')
-chrome_options.add_argument('--disable-infobars')
-chrome_options.add_argument('--disable-dev-shm-usage')
-chrome_options.add_argument('--start-maximized')
+# chrome_options = webdriver.ChromeOptions()
+# chrome_options.add_argument('--no-sandbox')
+# chrome_options.add_argument('--disable-infobars')
+# chrome_options.add_argument('--disable-dev-shm-usage')
+# chrome_options.add_argument('--start-maximized')
 
 # Run chrome
-# driver = webdriver.Chrome(service=service)
+driver = webdriver.Chrome(service=service)
 # driver = webdriver.Chrome('/path/to/chromedriver')  # Optional argument, if not specified will search path.
-driver = webdriver.Chrome(options=chrome_options)
+# driver = webdriver.Chrome(options=chrome_options)
 
 # store starting time
 begin = time.time()
