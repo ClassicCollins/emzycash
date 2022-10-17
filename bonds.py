@@ -9,6 +9,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select, WebDriverWait
 import chromedriver_autoinstaller
+from webdriver_manager.chrome import ChromeDriverManager
+
 
 
 st.image("bond_background.jpeg", caption='Think Easy Cash, Think EmzyCash', width=600, use_column_width="always")
@@ -38,9 +40,11 @@ company_name = st.sidebar.text_input("Enter a Company name(optional): ", "Hess")
 coupon_frequency = st.sidebar.text_input("Enter Coupon frequency (optional): ", "Semi-Annual")
 # coupon_frequency = "Semi-Annual"
 
-chromedriver_autoinstaller.install()
+#chromedriver_autoinstaller.install()
 
 # Chrome options
+service = Service(executable_path=ChromeDriverManager().install())
+
 # chrome_options = webdriver.ChromeOptions()
 # chrome_options.add_argument('--no-sandbox')
 # chrome_options.add_argument('--disable-infobars')
@@ -48,7 +52,9 @@ chromedriver_autoinstaller.install()
 # chrome_options.add_argument('--start-maximized')
 
 # Run chrome
-driver = webdriver.Chrome('/path/to/chromedriver')  # Optional argument, if not specified will search path.
+driver = webdriver.Chrome(service=service)
+
+# 2. driver = webdriver.Chrome('/path/to/chromedriver')  # Optional argument, if not specified will search path.
 #driver = webdriver.Chrome(options=chrome_options)
 
 # store starting time
