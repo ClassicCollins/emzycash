@@ -41,16 +41,15 @@ coupon_frequency = st.sidebar.text_input("Enter Coupon frequency (optional): ", 
 chromedriver_autoinstaller.install()
 
 # Chrome options
-chrome_options = webdriver.ChromeOptions()
-chrome_options.add_argument('--no-sandbox')
-chrome_options.add_argument('--disable-infobars')
-chrome_options.add_argument('--disable-dev-shm-usage')
-chrome_options.add_argument('--start-maximized')
+# chrome_options = webdriver.ChromeOptions()
+# chrome_options.add_argument('--no-sandbox')
+# chrome_options.add_argument('--disable-infobars')
+# chrome_options.add_argument('--disable-dev-shm-usage')
+# chrome_options.add_argument('--start-maximized')
 
 # Run chrome
-driver = webdriver.Chrome(options=chrome_options)
-# driver.get("http://www.python.org")
-# assert "Python" in driver.title
+driver = webdriver.Chrome('/path/to/chromedriver')  # Optional argument, if not specified will search path.
+#driver = webdriver.Chrome(options=chrome_options)
 
 # store starting time
 begin = time.time()
