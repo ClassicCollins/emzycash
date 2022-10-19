@@ -39,7 +39,7 @@ There are a lot of other factors which cannot be discussed in details here.
 feel free to connect with us **emezieugwuozor@gmail.com** or whatsapp **+2348180094419**
 """)
 badge(type="twitter", name="emezie_ugwuozor")
-badge(type="github", name="EmzyCash")
+badge(type="github", name="ClassicCollins")
 st.write("""
          [**LinkedIn**](https://www.linkedin.com/in/collins-ugwuozor-48791a15 "Linkedin Homepage")
          """)
