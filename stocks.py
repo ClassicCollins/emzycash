@@ -208,6 +208,13 @@ also suggests to sell at price slightly below %.2f.
 """ % (companyName, min_low, max_high, min_low, max_high))
 
 st.write("""
+### Practice
+
+Click on the investopedia link below to create a demo account and  practice with stock and options investment 
+#### [Investopedia Simulator](https://www.investopedia.com/auth/realms/investopedia/login-actions/authenticate?client_id=finance-simulator&tab_id=tg6oI4h4VAQ "Click to practice")
+""")
+
+st.write("""
 ### Disclaimer
 The best investment you can make with your money is to invest in yourself and in your knowledge. 
 Make sure that you understand our disruptive future ahead before investing. We will not be liable for any loss of money 
@@ -215,10 +222,7 @@ in
 your investment.
 """)
 
-st.write("""
-Click on the investopedia link below to create a demo account and  practice with stock and options investment 
-### [Investopedia Simulator](https://www.investopedia.com/auth/realms/investopedia/login-actions/authenticate?client_id=finance-simulator&tab_id=tg6oI4h4VAQ "Click to practice")
-""")
+
 
 
 # tickerDF_greyed = tickerDf.Close[tickerDf.Date < startDay]
