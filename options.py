@@ -110,7 +110,15 @@ Contact emezieugwuozor@gmail.com for more info on Options investment
 """ %(symbol, price,symbol))
 
 st.write("""
+### Practice
+
+Click on the investopedia link below to create a demo account/sign in and  practice with options and stock investment 
+#### [Investopedia Simulator](https://www.investopedia.com/auth/realms/investopedia/login-actions/authenticate?client_id=finance-simulator&tab_id=tg6oI4h4VAQ "Click to practice")
+""")
+
+st.write("""
 ### Disclaimer
+
 The best investment you can make with your money is to invest in yourself and in your knowledge. 
 Make sure that you understand our disruptive future ahead before investing. We will not be liable for any loss of money 
 in
