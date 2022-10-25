@@ -215,6 +215,11 @@ in
 your investment.
 """)
 
+st.write("""
+Click on the investopedia link below to create a demo account and  practice with stock and options investment 
+### [Investopedia Simulator](https://www.investopedia.com/auth/realms/investopedia/login-actions/authenticate?client_id=finance-simulator&tab_id=tg6oI4h4VAQ "Click to practice")
+""")
+
 
 # tickerDF_greyed = tickerDf.Close[tickerDf.Date < startDay]
 
