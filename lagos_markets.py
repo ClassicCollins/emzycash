@@ -3,7 +3,7 @@ from streamlit_extras.badges import badge
 from streamlit_extras.colored_header import colored_header
 from streamlit_extras.let_it_rain import rain
 rain(
-    emoji="#",
+    emoji="$",
     font_size=50,
     falling_speed=2,
     animation_length=1,
