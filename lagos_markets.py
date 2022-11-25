@@ -12,5 +12,5 @@ Entrepreneurs can use this to site their businesses, precision marketing, target
 Further studies can be carried out in each Local Government Area to decide the best location for businesses.
 If this interests you, kindly reach me by email or DM. I'm very open to knowledge sharing and transfer.
 ## [Home](https://emzycash.streamlitapp.com "Click to return home")
-Kindly reach out to emezieugwuozor@gmail.com to optimize your investment in Forex.
+Kindly reach out to emezieugwuozor@gmail.com to discuss further on Market activity analysis using QGIS .
 """)
