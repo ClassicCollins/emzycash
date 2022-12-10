@@ -13,6 +13,6 @@ Entrepreneurs can use this to site their businesses, precision marketing, target
 Further studies can be carried out in each Local Government Area to decide the best location for businesses.
 If this interests you, kindly reach me by email or DM. I'm very open to knowledge sharing and transfer.
 Kindly reach out to emezieugwuozor@gmail.com to discuss further on Market activity analysis using QGIS.
-If you want to view an interactive (web) map built by me using QGIS and  qgis2web plug-in **click on the link below**. Its U.S 990 largest cities Sunset time and population.
+If you want to view an interactive (web) map built by me using QGIS and  qgis2web plug-in **click on the link below**. Its U.S 990 largest cities sunset time and population.
 #### [WebMap](https://classiccollins.github.io/sunlight_in_US/)
 """)
