@@ -113,7 +113,7 @@ st.write("""
 ### Practice
 
 Click on the investopedia link below to create a demo account/sign in and  practice with options and stock investment 
-##### [Investopedia Simulator](https://www.investopedia.com/" Log in to practice")
+#### [Investopedia Simulator](https://www.investopedia.com/ "Log in to practice")
 """)
 
 st.write("""
