@@ -33,9 +33,8 @@ Finance for web.
 """)
 # Compare Five Stocks
 
-today = date.today()
-yesterday = today - timedelta(days = 1)
-def compare_stocks(tickers, start_time=date.today() - datetime.timedelta(365 * 2), end_time=yesterday):
+
+def compare_stocks(tickers, start_time=date.today() - datetime.timedelta(365 * 2), end_time=today = date.today()):
 
     prices = pdr.DataReader(list(tickers), "yahoo", start_time, end_time)["Adj Close"]
 
