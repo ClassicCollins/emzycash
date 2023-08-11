@@ -207,12 +207,12 @@ per share and drops when the price hits around $%.2f per share, then it suggests
 also suggests to sell at price slightly below %.2f.
 """ % (companyName, min_low, max_high, min_low, max_high))
 
-st.write("""
+#st.write("""
 ### Practice
 
-Click on the investopedia link below to create a demo account and  practice with stock and options investment 
+#Click on the investopedia link below to create a demo account and  practice with stock and options investment 
 #### [Investopedia Simulator](https://www.investopedia.com/auth/realms/investopedia/login-actions/authenticate?client_id=finance-simulator&tab_id=tg6oI4h4VAQ "Click to practice")
-""")
+#""")
 
 st.write("""
 ### Disclaimer
