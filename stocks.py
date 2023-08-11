@@ -5,6 +5,7 @@ from datetime import date
 from dateutil.relativedelta import relativedelta
 import numpy as np
 from pandas_datareader import data as pdr
+pd.options.display.float_format = "{:,.4f}".format
 # from matplotlib import pyplot as plt
 import yfinance as yf
 yf.pdr_override()
