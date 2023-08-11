@@ -1,4 +1,3 @@
-import yfinance as yf
 import streamlit as st
 import pandas as pd
 import datetime as datetime
@@ -57,7 +56,7 @@ def CompareStocks(tickers,startTime=datetime.date.today()-datetime.timedelta(365
     MA = pd.DataFrame(((abs(prices - prices.rolling(50).mean())) / prices).mean(),columns=["VolTest2"],)
     
     investments = pd.concat([highLow, MA], axis=1)
-    print(investments)
+    
     investments = pd.concat([investments,pd.DataFrame(returns.std(), columns=["StandardDeviation"])],axis=1 )
     
     investments = pd.concat([investments,pd.DataFrame(100 * returns.mean(), columns=["Daily Return %"])],axis=1)
