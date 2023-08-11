@@ -5,8 +5,10 @@ import datetime as datetime
 from datetime import date
 from dateutil.relativedelta import relativedelta
 import numpy as np
+from pandas_datareader import data as pdr
 # from matplotlib import pyplot as plt
-import pandas_datareader as pdr
+import yfinance as yf
+yf.pdr_override()
 
 st.image("stock_background.jpg", caption='Think Easy Cash, Think EmzyCash', width=600, use_column_width="always")
 # Caption
@@ -33,42 +35,34 @@ Finance for web.
 """)
 # Compare Five Stocks
 
-
-def compare_stocks(tickers, start_time=date.today() - datetime.timedelta(365 * 2), end_time= date.today()):
-
-    prices = pdr.DataReader(list(tickers), "yahoo", start_time, end_time)["Adj Close"]
-
-    # prices = prices.rename(columns=tickers)
+def CompareStocks(tickers,startTime=datetime.date.today()-datetime.timedelta(365*2), endTime=datetime.date.today()):
+    # pull price data from yahooFinance -- (list(tickers.keys())) = ['Stock A key','Stock B key']
+    #prices = pdr.get_data_yahoo(list(tickers.keys()), startTime, endTime)["Adj Close"]
+    prices = pdr.get_data_yahoo(list(tickers), startTime, endTime)["Adj Close"]
+    
+    #prices = prices.rename(columns=tickers)
     returns = np.log(prices) - np.log(prices.shift(1))
     returns = returns.iloc[1:, 0:]
-
-    # pull data into separate DataFrame,for calculating our high_low metric
-    # The Metric is VolTest1
-    curr_year = prices.loc[date.today() - datetime.timedelta(365): date.today()]
-
-    high_low = (curr_year.max() - curr_year.min()) / prices.iloc[-1]
-    high_low = pd.DataFrame(high_low, columns=["Volatility Test1"])
-
+    
+    # pull data into separate DataFrame,for calculating our highLow metric
+    # highLow Metric is VolTest1
+    currYear = prices.loc[
+        date.today() - datetime.timedelta(365) : date.today() 
+    ]
+    
+    highLow = (currYear.max() - currYear.min()) / prices.iloc[-1]
+    highLow = pd.DataFrame(highLow, columns=["VolTest1"])
+    
     # Moving average volatility Metric, is VolTest2
-    ma = pd.DataFrame(
-        ((abs(prices - prices.rolling(50).mean())) / prices).mean(), columns=["Volatility Test2"],)
-
-    investments = pd.merge(high_low, ma, on="Symbols")
-    investments = pd.merge(
-        investments,
-        pd.DataFrame(returns.std(), columns=["Standard Deviation"]),
-        on="Symbols",
-    )
-
-    investments = pd.merge(
-        investments,
-        pd.DataFrame(100 * returns.mean(), columns=["% Daily Return"]),
-        on="Symbols",
-    )
-    investments = investments.round(4)
-
-    return investments
-
+    MA = pd.DataFrame(((abs(prices - prices.rolling(50).mean())) / prices).mean(),columns=["VolTest2"],)
+    
+    investments = pd.concat([highLow, MA], axis=1)
+    print(investments)
+    investments = pd.concat([investments,pd.DataFrame(returns.std(), columns=["StandardDeviation"])],axis=1 )
+    
+    investments = pd.concat([investments,pd.DataFrame(100 * returns.mean(), columns=["Daily Return %"])],axis=1)
+    
+    return investments.round(4)
 
 st.sidebar.write("Choose Five Stocks to compare their 2 years historical data.")
 st.sidebar.write("Test is based on three Volatility test and percentage of Return")
@@ -79,7 +73,8 @@ tickerSymbol2 = st.sidebar.text_input("Enter a ticker symbol 2: ", "MSFT")
 tickerSymbol3 = st.sidebar.text_input("Enter a ticker symbol 3: ", "PFE")
 tickerSymbol4 = st.sidebar.text_input("Enter a ticker symbol 4: ", "NVDA")
 tickerSymbol5 = st.sidebar.text_input("Enter a ticker symbol 5: ", "AMZN")
-compare = compare_stocks(tickerSymbol1)
+
+compare = CompareStocks((tickerSymbol1, tickerSymbol2, tickerSymbol3, tickerSymbol4, tickerSymbol5)) #compare_stocks(tickerSymbol1)
 #compare = compare_stocks((tickerSymbol1, tickerSymbol2, tickerSymbol3, tickerSymbol4, tickerSymbol5))
 # st.write('%s'%(compare))
 st.sidebar.dataframe(compare)
