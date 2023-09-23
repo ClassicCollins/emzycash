@@ -15,4 +15,3 @@ webdriver_manager
 python-dateutil
 chromedriver
 plotly
-io
