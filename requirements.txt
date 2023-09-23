@@ -6,7 +6,7 @@ streamlit_extras
 datetime
 numpy
 pyportfolioopt
-seaborn
+seaborn == v0_8
 selenium
 sympy
 chromedriver-autoinstaller
