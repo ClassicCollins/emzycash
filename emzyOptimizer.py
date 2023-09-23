@@ -123,10 +123,10 @@ except:
 	st.write('Enter correct stock tickers to be included in portfolio separated\
 	by commas WITHOUT spaces, e.g. "MA,META,V,AMZN,JPM,BA"and hit Enter.')
 
-#hide_streamlit_style = """
-#<style>
-##MainMenu {visibility: hidden;}
-#footer {visibility: hidden;}
-#</style>
-#"""
-#st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+hide_streamlit_style = """
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+</style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
