@@ -5,7 +5,7 @@ pandas_datareader
 streamlit_extras
 datetime
 numpy
-PyPortfolioOpt
+pyportfolioopt
 selenium
 sympy
 chromedriver-autoinstaller
