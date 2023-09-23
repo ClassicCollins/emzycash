@@ -8,7 +8,6 @@ datetime
 seaborn
 numpy
 PyPortfolioOpt
-copy
 selenium
 sympy
 chromedriver-autoinstaller
