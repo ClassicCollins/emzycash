@@ -6,6 +6,7 @@ streamlit_extras
 datetime
 numpy
 pyportfolioopt
+seaborn
 selenium
 sympy
 chromedriver-autoinstaller
