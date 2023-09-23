@@ -14,6 +14,7 @@ import pandas as pd
 import plotly.express as px
 from matplotlib.colors import ListedColormap
 import matplotlib.pyplot as plt
+import seaborn as sns
 from datetime import datetime
 from io import BytesIO
 
