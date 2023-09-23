@@ -1,16 +1,17 @@
 streamlit
 yfinance 
 pandas
+PyPortfolioOpt
+plotly
+matplotlib
+gunicorn
 pandas_datareader
 streamlit_extras
 datetime
 numpy
-pyportfolioopt == 1.5.5
-seaborn == 0.12.2
 selenium
 sympy
 chromedriver-autoinstaller
 webdriver_manager
 python-dateutil
 chromedriver
-pip == 23.2.1
