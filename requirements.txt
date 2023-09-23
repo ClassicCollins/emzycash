@@ -7,6 +7,7 @@ streamlit_extras
 datetime
 seaborn
 numpy
+PyPortfolioOpt
 pypfopt
 selenium
 sympy
