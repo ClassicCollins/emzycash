@@ -13,3 +13,4 @@ chromedriver-autoinstaller
 webdriver_manager
 python-dateutil
 chromedriver
+Python == 3.10.0
