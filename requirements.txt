@@ -13,5 +13,4 @@ chromedriver-autoinstaller
 webdriver_manager
 python-dateutil
 chromedriver
-python
 pip == 23.2.1
