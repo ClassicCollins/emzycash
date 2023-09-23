@@ -10,6 +10,7 @@ import numpy as np
 import pandas as pd
 import plotly.express as px
 import matplotlib.pyplot as plt
+plt.style.use("seaborn-v0_8")
 import seaborn as sns
 from datetime import datetime
 from io import BytesIO
