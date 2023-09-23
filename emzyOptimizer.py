@@ -27,7 +27,7 @@ def plot_efficient_frontier_and_max_sharpe(mu, S):
 	# Optimize portfolio for max Sharpe ratio and plot it out with efficient frontier curve
 	ef = EfficientFrontier(mu, S)
 	fig, ax = plt.subplots(figsize=(6,4))
-	ef_max_sharpe = copy.deepcopy(ef)
+	ef_max_sharpe = copy.(ef)
 	plotting.plot_efficient_frontier(ef, ax=ax, show_assets=False)
 	# Find the max sharpe portfolio
 	ef_max_sharpe.max_sharpe(risk_free_rate=0.02)
@@ -124,9 +124,9 @@ except:
 	by commas WITHOUT spaces, e.g. "MA,META,V,AMZN,JPM,BA"and hit Enter.')
 
 hide_streamlit_style = """
-<style>
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-</style>
-"""
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
