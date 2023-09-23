@@ -44,6 +44,10 @@ def plot_efficient_frontier_and_max_sharpe(mu, S):
 
 st.set_page_config(page_title = "Emzy Stock Portfolio Optimizer", layout = "wide")
 st.header("Emzy_Optimizer")
+st.write("""
+# EmzyCash
+## [Home](https://emzycash.streamlitapp.com "Click to return home")
+""")
 
 col1, col2 = st.columns(2)
 
