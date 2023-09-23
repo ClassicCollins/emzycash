@@ -20,7 +20,7 @@ import seaborn as sns
 sns.set_style("darkgrid")
 import matplotlib.pyplot as plt
 # Set the "seaborn" style
-plt.style.use("seaborn")
+plt.style.use("seaborn-v0_8")
 
 def plot_cum_returns(data, title):
 	daily_cum_returns = 1 + data.dropna().pct_change()
