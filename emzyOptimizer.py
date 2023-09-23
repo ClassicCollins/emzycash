@@ -12,6 +12,7 @@ import copy
 import numpy as np
 import pandas as pd
 import plotly.express as px
+from matplotlib.colors import ListedColormap
 import matplotlib.pyplot as plt
 from datetime import datetime
 from io import BytesIO
