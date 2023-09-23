@@ -14,6 +14,8 @@ plt.style.use("seaborn-v0_8")
 import seaborn as sns
 from datetime import datetime
 from io import BytesIO
+st.set_option('deprecation.showPyplotGlobalUse', False)
+st.pyplot(style='seaborn-v0_8')
 
 def plot_cum_returns(data, title):    
 	daily_cum_returns = 1 + data.dropna().pct_change()
