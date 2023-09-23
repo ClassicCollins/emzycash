@@ -3,7 +3,7 @@ yfinance
 pandas
 PyPortfolioOpt
 plotly
-matplotlib
+matplotlib == 3.8.0
 gunicorn
 pandas_datareader
 streamlit_extras
