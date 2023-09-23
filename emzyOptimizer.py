@@ -1,4 +1,4 @@
-pip install PyPortfolioOpt
+#pip install PyPortfolioOpt
 import streamlit as st
 import yfinance as yf
 from pypfopt.discrete_allocation import DiscreteAllocation, get_latest_prices
