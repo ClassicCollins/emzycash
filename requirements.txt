@@ -5,7 +5,7 @@ pandas_datareader
 streamlit_extras
 datetime
 numpy
-pyportfolioopt
+pyportfolioopt == 1.5.5
 seaborn == 0.12.2
 selenium
 sympy
