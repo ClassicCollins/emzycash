@@ -31,7 +31,7 @@ def plot_cum_returns(data, title):
 def plot_efficient_frontier_and_max_sharpe(mu, S):
 	# Optimize portfolio for max Sharpe ratio and plot it out with efficient frontier curve
 	ef = EfficientFrontier(mu, S)
-	fig, ax = plt.subplots(figsize=(6,4))
+	fig, ax = sns.subplots(figsize=(6,4))
 	ef_max_sharpe = copy.deepcopy(ef)
 	#plotting.plot_efficient_frontier(ef, ax=ax, show_assets=False)
 	# Find the max sharpe portfolio
