@@ -13,7 +13,7 @@ import copy
 import numpy as np
 import pandas as pd
 import plotly.express as px
-from matplotlib.colors import ListedColormap
+#from matplotlib.colors import ListedColormap
 from datetime import datetime
 from io import BytesIO
 import seaborn as sns
@@ -118,9 +118,9 @@ try:
 	st.subheader('Annual volatility: {}%'.format((annual_volatility*100).round(2)))
 	st.subheader('Sharpe Ratio: {}'.format(sharpe_ratio.round(2)))
 
-	#st.plotly_chart(fig_corr) # fig_corr is not a plotly chart
-	#st.plotly_chart(fig_price)
-	#st.plotly_chart(fig_cum_returns)
+	st.plotly_chart(fig_corr) # fig_corr is not a plotly chart
+	st.plotly_chart(fig_price)
+	st.plotly_chart(fig_cum_returns)
 
 
 
