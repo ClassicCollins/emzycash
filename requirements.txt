@@ -1,7 +1,6 @@
 streamlit
 yfinance 
 pandas
-matplotlib
 pandas_datareader
 streamlit_extras
 datetime
