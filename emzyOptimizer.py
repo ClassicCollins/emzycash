@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 from io import BytesIO
 import seaborn as sns
-sns.set_style("seaborn-deep")
+sns.set_style("darkgrid")
 
 def plot_cum_returns(data, title):
 	daily_cum_returns = 1 + data.dropna().pct_change()
