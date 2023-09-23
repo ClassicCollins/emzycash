@@ -14,9 +14,10 @@ import pandas as pd
 import plotly.express as px
 from matplotlib.colors import ListedColormap
 import matplotlib.pyplot as plt
-import seaborn as sns
 from datetime import datetime
 from io import BytesIO
+import seaborn as sns
+sns.set_style("darkgrid")
 
 def plot_cum_returns(data, title):
 	daily_cum_returns = 1 + data.dropna().pct_change()
