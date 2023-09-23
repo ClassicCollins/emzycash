@@ -1,5 +1,5 @@
 #pip install PyPortfolioOpt
-git clone https://github.com/robertmartin8/PyPortfolioOpt
+#git clone https://github.com/robertmartin8/PyPortfolioOpt
 #pip install -e git+https://github.com/robertmartin8/PyPortfolioOpt.git
 import streamlit as st
 import yfinance as yf
