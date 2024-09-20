@@ -130,9 +130,8 @@ If you had bought 100 shares of **{companyName}**, you would have made **${profi
 st.write("### Volume Chart")
 st.line_chart(tickerDf.Volume)
 
-
 # Filter data for tickerDF_greyed based on date condition
-tickerDf['Date'] = pd.to_datetime(tickerDf.index)  # Adjust 'Date' if your column is named differently
+tickerDf['Date'] = pd.to_datetime(tickerDf.index)  # Convert index to Date column if necessary
 tickerDF_greyed = tickerDf.Close[tickerDf.Date < startDay] 
 
 # Matplotlib plot
@@ -143,7 +142,7 @@ ax.plot(tickerDf.Date, tickerDf.Close, color="green", label="Closing Price")
 ax.plot(tickerDf.Date[tickerDf.Date < startDay], tickerDF_greyed, color="blue", label="Before Start Date")
 
 # Set titles and labels
-plt.title("Closing Prices for %s for the past %s months" % (tickerSymbol, monthsSlider))
+plt.title(f"Closing Prices for {tickerSymbol} for the past {timeSlider} {timeDf[timeChoiceSlider][0]}")
 plt.xlabel("Date")
 plt.ylabel("Closing Price")
 
@@ -168,25 +167,10 @@ fig_plotly.add_trace(go.Scatter(x=tickerDf.Date[tickerDf.Date < startDay], y=tic
 
 # Set titles and axis labels
 fig_plotly.update_layout(
-    title="Closing Prices for %s for the past %s months" % (tickerSymbol, monthsSlider),
+    title=f"Closing Prices for {tickerSymbol} for the past {timeSlider} {timeDf[timeChoiceSlider][0]}",
     xaxis_title="Date",
     yaxis_title="Closing Price"
 )
 
 # Display Plotly chart with Streamlit
 st.plotly_chart(fig_plotly)
-
-
-# tickerDF_greyed = tickerDf.Close[tickerDf.Date < startDay]
-
-# #Close Price but using MatPlotLib
-# fig, ax = plt.subplots()
-# plt.plot(tickerDf.Close, color="green")
-# plt.plot(tickerDF_greyed, color="blue")
-# plt.title("Closing Prices for %s for the past %s months" % (tickerSymbol, monthsSlider))
-# plt.xlabel("Closing Price")
-# plt.ylabel("Time")
-# ax.set_facecolor("gray")
-# plt.grid(b=True, which='both',axis='both',c='blue')
-# st.pyplot(fig)
-# st.plotly_chart(fig)
