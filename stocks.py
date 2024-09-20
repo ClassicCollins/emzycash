@@ -122,7 +122,7 @@ st.line_chart(tickerDf[['Open', 'High', 'Low', 'Close']])
 gain = tickerDf['Close'][-1] - tickerDf['Close'][0]
 profit_n_loss = gain * 100
 st.write(f"""
-You would have made a profit or loss of **${gain:.2f}** multiplied by the number of shares bought at **${tickerDf['Close'][0]:.2f}** per share.
+You would have made a profit or loss of **dollar{gain:.2f}** multiplied by the number of shares bought at **dollar{tickerDf['Close'][0]:.2f}** per share.
 If you had bought 100 shares of **{companyName}**, you would have made **${profit_n_loss:.2f}** between the selected time and now.
 """)
 
@@ -132,6 +132,7 @@ st.line_chart(tickerDf.Volume)
 
 # Filter data for tickerDF_greyed based on date condition
 tickerDf['Date'] = pd.to_datetime(tickerDf.index)  # Convert index to Date column if necessary
+tickerDf['Date'] = tickerDf['Date'].dt.tz_localize(None)  # Remove timezone information
 tickerDF_greyed = tickerDf.Close[tickerDf.Date < startDay] 
 
 # Matplotlib plot
