@@ -165,7 +165,7 @@ st.pyplot(fig)
 fig_plotly = go.Figure()
 
 # Add full closing price as a trace
-fig_plotly.add_trace(go.Scatter(x=tickerDf.Date, y=tickerDf.Open, mode='lines', name='Opening Price', line=dict(color='red')))
+fig_plotly.add_trace(go.Scatter(x=tickerDf.Date, y=tickerDf.Low, mode='lines', name='Opening Price', line=dict(color='red')))
 
 # Add 'greyed' section as a separate trace
 fig_plotly.add_trace(go.Scatter(x=tickerDf.Date[tickerDf.Date < startDay], y=tickerDF_greyed, mode='lines', name='Before Start Date', line=dict(color='blue')))
