@@ -8,7 +8,7 @@ from pandas_datareader import data as pdr
 pd.options.display.float_format = "{:,.4f}".format
 # from matplotlib import pyplot as plt
 import yfinance as yf
-yf.pdr_override()
+# yf.pdr_override()
 
 st.image("stock_background.jpg", caption='Think Easy Cash, Think EmzyCash', width=600, use_column_width="always")
 # Caption
@@ -38,7 +38,7 @@ Finance for web.
 def CompareStocks(tickers,startTime=datetime.date.today()-datetime.timedelta(365*2), endTime=datetime.date.today()):
     # pull price data from yahooFinance -- (list(tickers.keys())) = ['Stock A key','Stock B key']
     #prices = pdr.get_data_yahoo(list(tickers.keys()), startTime, endTime)["Adj Close"]
-    prices = pdr.get_data_yahoo(list(tickers), startTime, endTime)["Adj Close"]
+    prices = yf.download(list(tickers), startTime, endTime)["Adj Close"]
     
     #prices = prices.rename(columns=tickers)
     returns = np.log(prices) - np.log(prices.shift(1))
