@@ -34,36 +34,32 @@ Ensure you entered a correct **ticker symbol** in the text box.(only for compani
 Finance for web.
 """)
 # Compare Five Stocks
+def CompareStocks(tickers, startTime=datetime.date.today()-datetime.timedelta(365*2), endTime=datetime.date.today()):
+    # Download price data
+    prices = yf.download(list(tickers), start=startTime, end=endTime)["Adj Close"]
+    
+    # Drop missing values (if any)
+    prices = prices.dropna()
 
-def CompareStocks(tickers,startTime=datetime.date.today()-datetime.timedelta(365*2), endTime=datetime.date.today()):
-    # pull price data from yahooFinance -- (list(tickers.keys())) = ['Stock A key','Stock B key']
-    #prices = pdr.get_data_yahoo(list(tickers.keys()), startTime, endTime)["Adj Close"]
-    prices = yf.download(list(tickers), startTime, endTime)["Adj Close"]
-    
-    #prices = prices.rename(columns=tickers)
+    # Calculate daily returns
     returns = np.log(prices) - np.log(prices.shift(1))
-    returns = returns.iloc[1:, 0:]
-    
-    # pull data into separate DataFrame,for calculating our highLow metric
-    # highLow Metric is VolTest1
-    prices.index = pd.to_datetime(prices.index)
-    currYear = prices.loc[
-        date.today() - datetime.timedelta(365) : date.today() 
-    ]
-    
+    returns = returns.iloc[1:, :]
+
+    # High-Low metric (VolTest1)
+    currYear = prices.loc[date.today() - datetime.timedelta(365) : date.today()]
     highLow = (currYear.max() - currYear.min()) / prices.iloc[-1]
     highLow = pd.DataFrame(highLow, columns=["VolTest1"])
-    
-    # Moving average volatility Metric, is VolTest2
-    MA = pd.DataFrame(((abs(prices - prices.rolling(50).mean())) / prices).mean(),columns=["VolTest2"],)
-    
+
+    # Moving average volatility (VolTest2)
+    MA = pd.DataFrame(((abs(prices - prices.rolling(50).mean())) / prices).mean(), columns=["VolTest2"])
+
+    # Combine metrics
     investments = pd.concat([highLow, MA], axis=1)
-    
-    investments = pd.concat([investments,pd.DataFrame(returns.std(), columns=["StandardDeviation"])],axis=1 )
-    
-    investments = pd.concat([investments,pd.DataFrame(100 * returns.mean(), columns=["Daily Return %"])],axis=1)
-    
+    investments = pd.concat([investments, pd.DataFrame(returns.std(), columns=["StandardDeviation"])], axis=1)
+    investments = pd.concat([investments, pd.DataFrame(100 * returns.mean(), columns=["Daily Return %"])], axis=1)
+
     return investments.round(4)
+
 
 st.sidebar.write("Choose Five Stocks to compare their 2 years historical data.")
 st.sidebar.write("Test is based on three Volatility test and percentage of Return")
