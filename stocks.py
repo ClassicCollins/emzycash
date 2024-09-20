@@ -122,7 +122,7 @@ st.line_chart(tickerDf[['Open', 'High', 'Low', 'Close']])
 gain = tickerDf['Close'][-1] - tickerDf['Close'][0]
 profit_n_loss = gain * 100
 st.write(f"""
-You would have made a profit or loss of **dollar{gain:.2f}** multiplied by the number of shares bought at **dollar{tickerDf['Close'][0]:.2f}** per share.
+You would have made a profit or loss of **{gain:.2f}dollars** multiplied by the number of shares bought at **{tickerDf['Close'][0]:.2f}dollars** per share.
 If you had bought 100 shares of **{companyName}**, you would have made **${profit_n_loss:.2f}** between the selected time and now.
 """)
 
@@ -151,7 +151,7 @@ plt.ylabel("Closing Price")
 # Customize the appearance
 ax.set_facecolor("gray")
 # Enable grid with custom appearance
-plt.grid(True, color='gray', linestyle='--', linewidth=0.5)
+plt.grid(True)
 
 #plt.grid(b=True, which='both', axis='both', color='blue')
 
@@ -165,16 +165,16 @@ st.pyplot(fig)
 fig_plotly = go.Figure()
 
 # Add full closing price as a trace
-fig_plotly.add_trace(go.Scatter(x=tickerDf.Date, y=tickerDf.Close, mode='lines', name='Closing Price', line=dict(color='green')))
+fig_plotly.add_trace(go.Scatter(x=tickerDf.Date, y=tickerDf.Open, mode='lines', name='Opening Price', line=dict(color='red')))
 
 # Add 'greyed' section as a separate trace
 fig_plotly.add_trace(go.Scatter(x=tickerDf.Date[tickerDf.Date < startDay], y=tickerDF_greyed, mode='lines', name='Before Start Date', line=dict(color='blue')))
 
 # Set titles and axis labels
 fig_plotly.update_layout(
-    title=f"Closing Prices for {tickerSymbol} for the past {timeSlider} {timeDf[timeChoiceSlider][0]}",
+    title=f"Opening Prices for {tickerSymbol} for the past {timeSlider} {timeDf[timeChoiceSlider][0]}",
     xaxis_title="Date",
-    yaxis_title="Closing Price"
+    yaxis_title="Opening Price"
 )
 
 # Display Plotly chart with Streamlit
