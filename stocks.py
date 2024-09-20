@@ -163,7 +163,7 @@ st.pyplot(fig)
 
 # Plotly chart (interactive)
 fig_plotly = go.Figure()
-plt.grid(True)
+
 # Add full closing price as a trace
 fig_plotly.add_trace(go.Scatter(x=tickerDf.Date, y=tickerDf.Low, mode='lines', name='Opening Price', line=dict(color='red')))
 
@@ -171,6 +171,11 @@ fig_plotly.add_trace(go.Scatter(x=tickerDf.Date, y=tickerDf.Low, mode='lines', n
 fig_plotly.add_trace(go.Scatter(x=tickerDf.Date[tickerDf.Date < startDay], y=tickerDF_greyed, mode='lines', name='Before Start Date', line=dict(color='blue')))
 
 # Set titles and axis labels
+fig.update_layout(
+    xaxis=dict(showgrid=True, gridcolor='lightgray', gridwidth=1, griddash='dash'),
+    yaxis=dict(showgrid=True, gridcolor='lightgray', gridwidth=1, griddash='dash')
+)
+
 fig_plotly.update_layout(
     title=f"Opening Prices for {tickerSymbol} for the past {timeSlider} {timeDf[timeChoiceSlider][0]}",
     xaxis_title="Date",
