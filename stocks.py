@@ -90,7 +90,7 @@ Enter a **ticker symbol** of the company and use the slider to adjust the time i
 timeChoices = {'Daily': ['Days', 365, '1d'], 'Weekly': ['Weeks', 104, '1wk'], 'Monthly': ['Months', 60, '1mo'], 'Quarterly': ['Quarters', 48, '3mo']}
 timeDf = pd.DataFrame(timeChoices)
 
-tickerSymbol = st.text_input("Enter a ticker symbol for selected company: ", "MSFT")
+tickerSymbol = st.text_input("Enter a ticker symbol for selected company: ", "NVDA")
 timeChoiceSlider = st.select_slider("Choose the type of data:", options=["Daily", "Weekly", "Monthly", "Quarterly"])
 timeSlider = st.slider(f"Number of Previous {timeDf[timeChoiceSlider][0]}", min_value=1, max_value=timeDf[timeChoiceSlider][1], value=timeDf[timeChoiceSlider][1])
 
