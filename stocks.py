@@ -179,7 +179,7 @@ fig_plotly.update_layout(
 fig_plotly.update_layout(
     title=f"Interactive Graph for Closing Prices for {tickerSymbol} for the past {timeSlider} {timeDf[timeChoiceSlider][0]}",
     xaxis_title="Date",
-    yaxis_title="Clossig Price"
+    yaxis_title="Closing Price"
 )
 
 # Display Plotly chart with Streamlit
