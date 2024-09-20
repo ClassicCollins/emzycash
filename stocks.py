@@ -5,6 +5,8 @@ from datetime import date
 from dateutil.relativedelta import relativedelta
 import numpy as np
 import yfinance as yf
+import plotly.graph_objects as go
+import matplotlib.pyplot as plt
 
 pd.options.display.float_format = "{:,.4f}".format
 
@@ -129,6 +131,49 @@ st.write("### Volume Chart")
 st.line_chart(tickerDf.Volume)
 
 
+# Filter data for tickerDF_greyed based on date condition
+tickerDF_greyed = tickerDf.Close[tickerDf.Date < startDay] 
+
+# Matplotlib plot
+fig, ax = plt.subplots()
+# Plot the full closing price in green
+ax.plot(tickerDf.Date, tickerDf.Close, color="green", label="Closing Price")
+# Plot the 'greyed' closing price data in blue
+ax.plot(tickerDf.Date[tickerDf.Date < startDay], tickerDF_greyed, color="blue", label="Before Start Date")
+
+# Set titles and labels
+plt.title("Closing Prices for %s for the past %s months" % (tickerSymbol, monthsSlider))
+plt.xlabel("Date")
+plt.ylabel("Closing Price")
+
+# Customize the appearance
+ax.set_facecolor("gray")
+plt.grid(b=True, which='both', axis='both', color='blue')
+
+# Add legend
+ax.legend()
+
+# Display the plot with Streamlit
+st.pyplot(fig)
+
+# Plotly chart (interactive)
+fig_plotly = go.Figure()
+
+# Add full closing price as a trace
+fig_plotly.add_trace(go.Scatter(x=tickerDf.Date, y=tickerDf.Close, mode='lines', name='Closing Price', line=dict(color='green')))
+
+# Add 'greyed' section as a separate trace
+fig_plotly.add_trace(go.Scatter(x=tickerDf.Date[tickerDf.Date < startDay], y=tickerDF_greyed, mode='lines', name='Before Start Date', line=dict(color='blue')))
+
+# Set titles and axis labels
+fig_plotly.update_layout(
+    title="Closing Prices for %s for the past %s months" % (tickerSymbol, monthsSlider),
+    xaxis_title="Date",
+    yaxis_title="Closing Price"
+)
+
+# Display Plotly chart with Streamlit
+st.plotly_chart(fig_plotly)
 
 
 # tickerDF_greyed = tickerDf.Close[tickerDf.Date < startDay]
