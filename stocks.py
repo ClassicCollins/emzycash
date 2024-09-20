@@ -165,7 +165,7 @@ st.pyplot(fig)
 fig_plotly = go.Figure()
 
 # Add full closing price as a trace
-fig_plotly.add_trace(go.Scatter(x=tickerDf.Date, y=tickerDf.Low, mode='lines', name='Opening Price', line=dict(color='red')))
+fig_plotly.add_trace(go.Scatter(x=tickerDf.Date, y=tickerDf.Close, mode='lines', name='Closing Price', line=dict(color='green')))
 
 # Add 'greyed' section as a separate trace
 fig_plotly.add_trace(go.Scatter(x=tickerDf.Date[tickerDf.Date < startDay], y=tickerDF_greyed, mode='lines', name='Before Start Date', line=dict(color='blue')))
@@ -177,9 +177,9 @@ fig_plotly.update_layout(
 )
 
 fig_plotly.update_layout(
-    title=f"Low Prices for {tickerSymbol} for the past {timeSlider} {timeDf[timeChoiceSlider][0]}",
+    title=f"Interactive Graph for Closing Prices for {tickerSymbol} for the past {timeSlider} {timeDf[timeChoiceSlider][0]}",
     xaxis_title="Date",
-    yaxis_title="Low Price"
+    yaxis_title="Clossig Price"
 )
 
 # Display Plotly chart with Streamlit
