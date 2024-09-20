@@ -132,6 +132,7 @@ st.line_chart(tickerDf.Volume)
 
 
 # Filter data for tickerDF_greyed based on date condition
+tickerDf['Date'] = pd.to_datetime(tickerDf.index)  # Adjust 'Date' if your column is named differently
 tickerDF_greyed = tickerDf.Close[tickerDf.Date < startDay] 
 
 # Matplotlib plot
