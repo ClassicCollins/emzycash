@@ -46,6 +46,7 @@ def CompareStocks(tickers,startTime=datetime.date.today()-datetime.timedelta(365
     
     # pull data into separate DataFrame,for calculating our highLow metric
     # highLow Metric is VolTest1
+    prices.index = pd.to_datetime(prices.index)
     currYear = prices.loc[
         date.today() - datetime.timedelta(365) : date.today() 
     ]
