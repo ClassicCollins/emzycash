@@ -172,14 +172,14 @@ fig_plotly.add_trace(go.Scatter(x=tickerDf.Date[tickerDf.Date < startDay], y=tic
 
 # Set titles and axis labels
 fig_plotly.update_layout(
-    xaxis=dict(showgrid=True, gridcolor='lightgray', gridwidth=1, griddash='dash'),
-    yaxis=dict(showgrid=True, gridcolor='lightgray', gridwidth=1, griddash='dash')
+    xaxis=dict(showgrid=True, gridcolor='lightgray'),
+    yaxis=dict(showgrid=True, gridcolor='lightgray')
 )
 
 fig_plotly.update_layout(
-    title=f"Opening Prices for {tickerSymbol} for the past {timeSlider} {timeDf[timeChoiceSlider][0]}",
+    title=f"Low Prices for {tickerSymbol} for the past {timeSlider} {timeDf[timeChoiceSlider][0]}",
     xaxis_title="Date",
-    yaxis_title="Opening Price"
+    yaxis_title="Low Price"
 )
 
 # Display Plotly chart with Streamlit
