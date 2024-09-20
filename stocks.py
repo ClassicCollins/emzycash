@@ -150,7 +150,10 @@ plt.ylabel("Closing Price")
 
 # Customize the appearance
 ax.set_facecolor("gray")
-plt.grid(b=True, which='both', axis='both', color='blue')
+# Enable grid with custom appearance
+plt.grid(True, color='gray', linestyle='--', linewidth=0.5)
+
+#plt.grid(b=True, which='both', axis='both', color='blue')
 
 # Add legend
 ax.legend()
