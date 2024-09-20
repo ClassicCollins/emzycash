@@ -171,7 +171,7 @@ fig_plotly.add_trace(go.Scatter(x=tickerDf.Date, y=tickerDf.Low, mode='lines', n
 fig_plotly.add_trace(go.Scatter(x=tickerDf.Date[tickerDf.Date < startDay], y=tickerDF_greyed, mode='lines', name='Before Start Date', line=dict(color='blue')))
 
 # Set titles and axis labels
-fig.update_layout(
+fig_plotly.update_layout(
     xaxis=dict(showgrid=True, gridcolor='lightgray', gridwidth=1, griddash='dash'),
     yaxis=dict(showgrid=True, gridcolor='lightgray', gridwidth=1, griddash='dash')
 )
