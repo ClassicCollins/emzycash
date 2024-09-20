@@ -30,6 +30,9 @@ def CompareStocks(tickers, startTime=datetime.date.today()-datetime.timedelta(36
     # Drop missing values
     prices = prices.dropna()
 
+    # Make sure the index is tz-naive (removes timezone information)
+    prices.index = prices.index.tz_localize(None)
+
     # Calculate daily returns
     returns = np.log(prices) - np.log(prices.shift(1))
     returns = returns.iloc[1:, :]
@@ -48,6 +51,7 @@ def CompareStocks(tickers, startTime=datetime.date.today()-datetime.timedelta(36
     investments = pd.concat([investments, pd.DataFrame(100 * returns.mean(), columns=["Daily Return %"])], axis=1)
 
     return investments.round(4)
+
 
 # Sidebar for ticker input
 st.sidebar.write("Choose five stocks to compare.")
