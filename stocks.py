@@ -149,7 +149,7 @@ plt.xlabel("Date")
 plt.ylabel("Closing Price")
 
 # Customize the appearance
-ax.set_facecolor("gray")
+#ax.set_facecolor("gray")
 # Enable grid with custom appearance
 plt.grid(True)
 
@@ -163,7 +163,7 @@ st.pyplot(fig)
 
 # Plotly chart (interactive)
 fig_plotly = go.Figure()
-
+plt.grid(True)
 # Add full closing price as a trace
 fig_plotly.add_trace(go.Scatter(x=tickerDf.Date, y=tickerDf.Low, mode='lines', name='Opening Price', line=dict(color='red')))
 
