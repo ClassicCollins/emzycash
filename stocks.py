@@ -132,6 +132,7 @@ st.line_chart(tickerDf.Volume)
 
 # Filter data for tickerDF_greyed based on date condition
 tickerDf['Date'] = pd.to_datetime(tickerDf.index)  # Convert index to Date column if necessary
+startDay = pd.to_datetime(startDay) # Ensure both are datetime objects
 tickerDf['Date'] = tickerDf['Date'].dt.tz_localize(None)  # Remove timezone information
 tickerDF_greyed = tickerDf.Close[tickerDf.Date < startDay] 
 
