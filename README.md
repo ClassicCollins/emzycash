@@ -1,12 +1,5 @@
-is a platform for quantitative analyses of financial instruments.
-Its primary aim is to ignite investors' passion for financial assets and take them through the rigorous road of investment
-in order to make profitable returns at minimal risk.
- 
-We will concentrate on stocks, bonds, options, forex, and cryptos. 
-If any of these financial assets interest you and you wish to build a portfolio with it 
-[click here](https://emzycash.streamlitapp.com/ "EmzyCash")
 # Emzycash Application 
-Quantitative Analyses of Financial Assets on Streamlit 
+Quantitative Analyses of Financial Assets on Streamlit For Making Informed Investment
 <!-- Improved compatibility of back to top link: See: https://github.com/ClassicCollins/emzycash/back2top -->
 <a id="readme-top"></a>
 <!--
@@ -34,7 +27,7 @@ Quantitative Analyses of Financial Assets on Streamlit
   
   </a>
 
-<h3 align="center">EmzyCash Web App</h3>
+<h3 align="center">EmzyInvest Web App</h3>
 
   <p align="center">
     A Platform for Quantitative Analyses of Financial Instruments!
@@ -109,8 +102,8 @@ in order to make profitable returns at minimal risk.
 <!-- HOW TO USE THE APP -->
 ## How to Use the App
 `Home Page:` 
-* Access the App: Visit [Emzycash_on_Streamlit](https://emzycash.streamlitapp.com) to start using the application.
-* This is the [landing_page](https://emzycash.streamlitapp.com) where you can:
+* Access the App: Visit [Emzycash on Streamlit](https://emzycash.streamlitapp.com) to start using the application.
+* This is the [landing page](https://emzycash.streamlitapp.com/ "EmzyCash") where you can:
 * Get information about finacial asset investment.
 * Access market news and analysis.
 * Ask questions and give feedbacks by filling out form on the side bar.
@@ -173,7 +166,7 @@ In the Portfolio section, you can:
 
 <!-- LICENCE -->
 ## License
-* `MIT` License applies.
+* This project is licensed under the MIT License. See the [LICENSE](https://github.com/ClassicCollins/structural-vs-predictive-models/blob/master/LICENSE) file for details
   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
