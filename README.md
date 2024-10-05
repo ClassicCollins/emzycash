@@ -28,7 +28,7 @@ Quantitative Analyses of Financial Assets on Streamlit For Making Informed Inves
   
   </a>
 
-<h3 align="center">EmzyInvest Web App</h3>
+<h3 align="center">EmzyCash Invest Web App</h3>
 
   <p align="center">
     A Platform for Quantitative Analyses of Financial Instruments!
