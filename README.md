@@ -1,5 +1,5 @@
 # Emzycash Application 
-Quantitative Analyses of Financial Assets on Streamlit For Making Informed Investment
+Quantitative Analyses of Financial Assets on Streamlit For Making Informed Investment Decision
 <!-- Improved compatibility of back to top link: See: https://github.com/ClassicCollins/emzycash/back2top -->
 <a id="readme-top"></a>
 <!--
@@ -17,6 +17,7 @@ Quantitative Analyses of Financial Assets on Streamlit For Making Informed Inves
 *** for stars-url, forks-url, etc.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links 
 -->
+[![Forks][forks-shield]][forks-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![Twitter][twitter-shield]][twitter-url]
@@ -188,19 +189,23 @@ Don't forget to give the project a star! Thanks again!
 * [Python](https://www.python.org)
 * [MIT License](https://opensource.org/license/mit)
 * [Yahoo_Finance](https://finance.yahoo.com)
-* [streamlit](https://share.streamlit.io)
+* [Streamlit](https://share.streamlit.io)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[twitter-shield]: https://img.shields.io/badge/-Twitter-black.svg?style=for-the-badge&logo=x&colorB=555
-[twitter-url]: https://x.com/ClassicCollins2
+
+
 [issues-shield]: https://img.shields.io/github/issues/ClassicCollins/structural-vs-predictive-models.svg?style=for-the-badge
 [issues-url]: https://github.com/ClassicCollins/structural-vs-predictive-models/issues
+[forks-shield]: https://img.shields.io/github/forks/ClassicCollins/emzycash.svg?style=for-the-badge
+[forks-url]: https://github.com/ClassicCollins/emzycash/forks
 [license-shield]: https://img.shields.io/github/license/ClassicCollins/structural-vs-predictive-models.svg?style=for-the-badge
 [license-url]: https://github.com/ClassicCollins/structural-vs-predictive-models/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-white.svg?style=for-the-badge&logo=linkedin&colorB=blue
 [linkedin-url]: https://linkedin.com/in/collins-ugwuozor
+[twitter-shield]: https://img.shields.io/badge/-Twitter-black.svg?style=for-the-badge&logo=x&colorB=555
+[twitter-url]: https://x.com/ClassicCollins2
 [product-screenshot]: image/screenshot.png
