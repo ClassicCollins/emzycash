@@ -14,5 +14,5 @@ Further studies can be carried out in each Local Government Area to decide the b
 If this interests you, kindly reach me by email or DM. I'm very open to knowledge sharing and transfer.
 Kindly reach out to emezieugwuozor@gmail.com to discuss further on Market activity analysis using QGIS.
 If you want to view an interactive (web) map built by me using QGIS and  qgis2web plug-in **click on the link below**. Its U.S 990 largest cities sunset time and population.
-#### [Interactive_Web_Map](https://classiccollins.github.io/Sunrise-Sunset-Times-and-Population-Data-for-US-Cities/)
+#### [Interactive Web Map](https://classiccollins.github.io/Sunrise-Sunset-Times-and-Population-Data-for-US-Cities/)
 """)
