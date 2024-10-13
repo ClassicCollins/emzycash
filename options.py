@@ -6,7 +6,7 @@ st.image("Option_background.jpg", caption='Think Easy Cash, Think EmzyCash', wid
 # Caption
 st.write("""
 # EmzyCash
-## [Home](https://emzycash.streamlitapp.com "Click to return home")
+### [Home](https://emzycash.streamlitapp.com "Click to return home")
 Find below introduction to options investment.
 - Options are a type of derivative product (financial asset) that allow investors to speculate on or hedge against the volatility of an underlying asset(stock).
 - We have call options and put options. Investor goes for a call option when a rise in the price of underlying asset is speculated and a put option when the fall in price of underlying asset is speculated.
