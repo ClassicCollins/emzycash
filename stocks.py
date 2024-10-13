@@ -14,7 +14,7 @@ pd.options.display.float_format = "{:,.4f}".format
 st.image("stock_background.jpg", caption='Think Easy Cash, Think EmzyCash', width=600, use_column_width="always")
 st.write("""
 # EmzyCash
-## [Home](https://emzycash.streamlitapp.com "Click to return home")
+### [Home](https://emzycash.streamlitapp.com "Click to return home")
 
 Welcome to stocks investment. The steps we are to take in quantitative analysis are:
 
